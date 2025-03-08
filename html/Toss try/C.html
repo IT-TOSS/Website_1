@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Themed Flip Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Dark Theme */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            justify-content: center; /* Centers everything vertically */
+        }
+
+        .services-section {
+            width: 100%;
+        }
+
+        .title-box h2 {
+            font-size: 35px;
+            margin-bottom: 30px;
+            color: #a13e17;
+            text-transform: uppercase;
+        }
+
+        /* Centering the cards in a single row */
+        .services-box {
+            display: flex;
+            justify-content: center; /* Centers cards */
+            align-items: center;
+            gap: 48px; /* Space between cards */
+            flex-wrap: nowrap; /* Ensures cards stay in one row */
+        }
+
+        /* Individual Card Container */
+        .col-lg-3 {
+            perspective: 1000px;
+            width: 180px;
+        }
+
+        /* Flip Card */
+        .services-post {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        /* Flip Effect */
+        .col-lg-3:hover .services-post {
+            transform: rotateY(180deg);
+        }
+
+        /* Front and Back of Card */
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px #a13e17;
+        }
+
+        /* Front Side */
+        .card-front {
+            background: #1e1e1e;
+            border: 2px solid #a13e17;
+        }
+
+        .card-front i {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #a13e17;
+        }
+
+        .card-front h4 {
+            font-size: 14px;
+        }
+
+        /* Back Side */
+        .card-back {
+            background: #a13e17;
+            color: #121212;
+            transform: rotateY(180deg);
+        }
+
+        .card-back p {
+            font-size: 12px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<section class="services-section">
+    <div class="container">
+        <div class="title-box">
+            <h2>Solutions We Provide</h2>
+        </div>
+
+        <div class="services-box">
+
+            <div class="col-lg-3">
+                <a href="web_crawling.html">
+                    <div class="services-post">
+                        <div class="card-face card-front">
+                            <i class="fas fa-spider"></i>
+                            <h4>Web Crawling</h4>
+                        </div>
+                        <div class="card-face card-back">
+                            <p>Automated & manual crawling for data extraction & insights.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3">
+                <a href="annotation_services.html">
+                    <div class="services-post">
+                        <div class="card-face card-front">
+                            <i class="fas fa-box-open"></i>
+                            <h4>Annotation & Transcription</h4>
+                        </div>
+                        <div class="card-face card-back">
+                            <p>Precise AI/ML data labeling for high-quality datasets.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3">
+                <a href="Ecommerce.html">
+                    <div class="services-post">
+                        <div class="card-face card-front">
+                            <i class="fas fa-shopping-cart"></i>
+                            <h4>E-commerce Support</h4>
+                        </div>
+                        <div class="card-face card-back">
+                            <p>End-to-end services like cataloging & competitive mapping.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-3">
+                <a href="Training&development.html">
+                    <div class="services-post">
+                        <div class="card-face card-front">
+                            <i class="fas fa-code-branch"></i>
+                            <h4>Training & Development</h4>
+                        </div>
+                        <div class="card-face card-back">
+                            <p>Expert training to upskill & boost career growth.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

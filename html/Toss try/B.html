@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps - Toss Solutions, Jabalpur</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfKszmG0b_d2bqVRB5MbCLiZJQZVxsjAA&callback=initMap" ></script>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Location: Toss Solutions, Jabalpur</h2>
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+            // Coordinates for Toss Solutions, Jabalpur
+            var tossSolutions = { lat: 23.1815, lng: 79.9864 };
+
+            // Create a map centered at Toss Solutions
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 15,
+                center: tossSolutions
+            });
+
+            // Add a marker at Toss Solutions
+            var marker = new google.maps.Marker({
+                position: tossSolutions,
+                map: map,
+                title: "Toss Solutions, Jabalpur"
+            });
+        }
+    </script>
+
+</body>
+</html>

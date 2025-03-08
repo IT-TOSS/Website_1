@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye-Catching Dark Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+    <style>
+        /* Global Dark Theme */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0d0d;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(20, 20, 20, 0.9);
+            box-shadow: 0 4px 10px rgba(0, 238, 255, 0.2);
+        }
+
+        .navbar-brand {
+            color: #00eaff;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            margin-right: 15px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #00eaff;
+        }
+
+        /* Gradient Section Titles */
+        h2 {
+            font-size: 36px;
+            text-align: center;
+            font-weight: bold;
+            background: linear-gradient(90deg, #00eaff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        /* Section Animation */
+        section {
+            padding: 100px 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-in-out;
+        }
+
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* About Section */
+        .about-box {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .about-box img {
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 238, 255, 0.4);
+        }
+
+        .about-box p {
+            font-size: 18px;
+            color: #ccc;
+        }
+
+        /* Services Section */
+        .services-box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .card {
+            width: 260px;
+            height: 320px;
+            perspective: 1000px;
+            background: transparent;
+            border: none;
+        }
+
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 238, 255, 0.4);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card-front {
+            background: #1e1e1e;
+            border: 2px solid #00eaff;
+        }
+
+        .card-back {
+            background: #00eaff;
+            color: #121212;
+            transform: rotateY(180deg);
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1c1c1c;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer div {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer a {
+            color: #00eaff;
+            font-size: 24px;
+            transition: 0.3s;
+        }
+
+        .footer a:hover {
+            color: #ff00ff;
+        }
+
+        .footer p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">TOSS Solutions</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Life at TOSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- About Section -->
+<section class="about-section">
+    <div class="container">
+        <div class="about-box">
+            <img src="images/about.jpg" alt="About Image">
+            <div>
+                <h2>About Us</h2>
+                <p>We provide cutting-edge solutions in Training, Outsourcing, Sales, and Services...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="container text-center">
+        <h2>Our Services</h2>
+        <div class="services-box">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front"><h4>Web Crawling</h4></div>
+                    <div class="card-back"><p>Automated data extraction.</p></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front"><h4>Annotation</h4></div>
+                    <div class="card-back"><p>Data labeling for AI.</p></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front"><h4>Training & Development</h4></div>
+                    <div class="card-back"><p>Upskilling programs.</p></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front"><h4>E-commerce</h4></div>
+                    <div class="card-back"><p>Business solutions.</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div>
+        <img src="logo.png" alt="Company Logo" width="50">
+        <p>123 Business Street, Tech City</p>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <p>contact@toss.com | +123 456 7890</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("scroll", function () {
+        document.querySelectorAll("section").forEach((section) => {
+            if (section.getBoundingClientRect().top < window.innerHeight) {
+                section.classList.add("show");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
